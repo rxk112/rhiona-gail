@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>WHAT</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: white;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card {
+    width: 400px;
+    padding: 30px;
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+    position: relative;
+}
+
+h1 {
+    color: #ff4d6d;
+    margin: 10px 0 5px 0;
+    font-size: 36px;
+}
+
+h1.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+p {
+    color: #555;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+button {
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+button:hover {
+    background: #ff1e4d;
+}
+
+.btn-no {
+    background: #ccc;
+    color: #333;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.hearts span {
+    position: absolute;
+    bottom: -50px;
+    font-size: 20px;
+    color: rgba(255, 77, 109, 0.6);
+    animation: rise 6s infinite ease-in;
+}
+
+@keyframes rise {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-800px) scale(1.5); opacity: 0; }
+}
+
+.gif-small {
+    width: 200px;
+    margin: 0 auto 15px auto;
+}
+.gif-small .tenor-gif-embed,
+.gif-small .tenor-gif-embed a {
+    width: 100% !important;
+    pointer-events: none !important;
+    display: block;
+    margin: 0 auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts">
+    <span style="left:10%; animation-delay:0s;">❤️</span>
+    <span style="left:25%; animation-delay:1s;">💖</span>
+    <span style="left:40%; animation-delay:2s;">💕</span>
+    <span style="left:55%; animation-delay:1.5s;">❤️</span>
+    <span style="left:70%; animation-delay:3s;">💘</span>
+    <span style="left:85%; animation-delay:2.5s;">💗</span>
+</div>
+
+<div class="card">
+
+    <div id="gifContainer" class="gif-small">
+        <div class="tenor-gif-embed"
+             data-postid="1555753298461515374"
+             data-share-method="host"
+             data-aspect-ratio="1"
+             data-width="100%">
+            <a href="https://tenor.com/view/bubu-dudu-sseeyall-gif-1555753298461515374">
+                Bubu Dudu Sseeyall Sticker
+            </a>from <a href="https://tenor.com/search/bubu+dudu-stickers">Bubu Dudu Stickers</a>
+        </div>
+    </div>
+
+    <p id="valentineText">Babyyyy....</p>
+    <h1>Will you be my Valentine?</h1>
+
+    <div class="button-container" id="buttonContainer">
+        <button id="yesBtn" onclick="window.location.href='aaaa.html'">Yes</button>
+        <button class="btn-no" id="noBtn">No</button>
+    </div>
+
+</div>
+
+<script async src="https://tenor.com/embed.js"></script>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+const text = document.getElementById("valentineText");
+const container = document.getElementById("buttonContainer");
+const gifContainer = document.getElementById("gifContainer");
+const h1 = document.querySelector("h1");
+
+let clickCount = 0;
+
+noBtn.addEventListener("click", function() {
+    clickCount++;
+
+    if (clickCount === 1) {
+        text.innerText = "YOU CANT PRESS NO BOI";
+        h1.innerText = "WILL YOU BE MY VALENTINE?!😡💢";
+        h1.classList.add("shake");
+        setTimeout(() => h1.classList.remove("shake"), 500);
+
+        gifContainer.innerHTML = `
+        <div class="tenor-gif-embed"
+             data-postid="9329629052712003277"
+             data-share-method="host"
+             data-aspect-ratio="1.33155"
+             data-width="100%">
+            <a href="https://tenor.com/view/ng%E1%BB%A7-ngon-kh%C3%B3c-gif-9329629052712003277">Ngủ Ngon Khóc GIF</a>from 
+            <a href="https://tenor.com/search/ng%E1%BB%A7+ngon-gifs">Ngủ Ngon GIFs</a>
+        </div>`;
+        let script = document.createElement('script');
+        script.src = "https://tenor.com/embed.js";
+        script.async = true;
+        document.body.appendChild(script);
+    } 
+    else if (clickCount === 2) {
+        text.innerText = "NO AGAIN???? Imma ask you one more time okay?";
+        h1.innerText = "Will you be my Valentine, Baby?";
+
+        gifContainer.innerHTML = `
+        <div class="tenor-gif-embed"
+             data-postid="7350208909158435592"
+             data-share-method="host"
+             data-aspect-ratio="1"
+             data-width="100%">
+            <a href="https://tenor.com/view/dudu-kissing-bubu-hearts-i-love-you-i-miss-you-dudu-gif-7350208909158435592">
+                Dudu Kissing Bubu Hearts GIF
+            </a>from <a href="https://tenor.com/search/dudu+kissing+bubu-gifs">Dudu Kissing Bubu GIFs</a>
+        </div>`;
+        let script = document.createElement('script');
+        script.src = "https://tenor.com/embed.js";
+        script.async = true;
+        document.body.appendChild(script);
+
+        noBtn.style.display = "none";
+        container.style.justifyContent = "center";
+    }
+});
+</script>
+
+</body>
+</html>

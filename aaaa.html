@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WHAT</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #ff3366;
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            margin-bottom: 10px;
+        }
+
+        .video-container {
+            max-width: 500px;
+            min-width: 300px;
+            width: 70%;
+            margin: 30px auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .gif-wrapper {
+            position: fixed;
+            width: 300px;
+            z-index: 999;
+            pointer-events: none;
+        }
+
+        .top-left { top: 120px; left: 120px; }
+        .top-right { top: 120px; right: 120px; }
+        .bottom-left { bottom: 120px; left: 120px; }
+        .bottom-right { bottom: 120px; right: 120px; }
+
+        .gif-wrapper .tenor-gif-embed {
+            width: 100% !important;
+            pointer-events: none !important;
+        }
+
+        .center-gif {
+            width: 150px;
+            margin: 20px auto 30px auto;
+            pointer-events: none;
+        }
+
+        .center-gif .tenor-gif-embed {
+            width: 100% !important;
+            pointer-events: none !important;
+        }
+
+        .hearts {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 998;
+        }
+
+        .hearts span {
+            position: absolute;
+            bottom: -50px;
+            font-size: 15px;
+            color: rgba(255, 77, 109, 0.7);
+            animation-name: rise;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes rise {
+            0% {
+                transform: translateY(0) rotate(0deg) scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-400px) rotate(180deg) scale(1.2);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-800px) rotate(360deg) scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hearts">
+        <span style="left:5%; animation-duration:6s; animation-delay:0s;">❤️</span>
+        <span style="left:15%; animation-duration:7s; animation-delay:1s; font-size:18px;">💖</span>
+        <span style="left:25%; animation-duration:5s; animation-delay:0.5s;">💕</span>
+        <span style="left:35%; animation-duration:8s; animation-delay:2s;">❤️</span>
+        <span style="left:45%; animation-duration:6s; animation-delay:1.5s; font-size:22px;">💗</span>
+        <span style="left:55%; animation-duration:7s; animation-delay:0s;">💘</span>
+        <span style="left:60%; animation-duration:5s; animation-delay:2.5s; font-size:16px;">💖</span>
+        <span style="left:70%; animation-duration:6.5s; animation-delay:1s;">💕</span>
+        <span style="left:80%; animation-duration:7.5s; animation-delay:3s; font-size:20px;">❤️</span>
+        <span style="left:90%; animation-duration:8s; animation-delay:0.7s;">💗</span>
+        <span style="left:50%; animation-duration:6s; animation-delay:1s; font-size:25px;">💘</span>
+        <span style="left:30%; animation-duration:5.5s; animation-delay:2s;">💖</span>
+    </div>
+
+    <div class="gif-wrapper top-left">
+        <div class="tenor-gif-embed"
+            data-postid="16606050094708454978"
+            data-share-method="host"
+            data-aspect-ratio="1.02469"
+            data-width="100%">
+        </div>
+    </div>
+
+    <div class="gif-wrapper top-right">
+        <div class="tenor-gif-embed"
+            data-postid="12175127243201573223"
+            data-share-method="host"
+            data-aspect-ratio="1.24286"
+            data-width="100%">
+        </div>
+    </div>
+
+    <div class="gif-wrapper bottom-left">
+        <div class="tenor-gif-embed"
+            data-postid="27290145"
+            data-share-method="host"
+            data-aspect-ratio="1.17216"
+            data-width="100%">
+        </div>
+    </div>
+
+    <div class="gif-wrapper bottom-right">
+        <div class="tenor-gif-embed"
+            data-postid="1106600649183018975"
+            data-share-method="host"
+            data-aspect-ratio="1.20979"
+            data-width="100%">
+        </div>
+    </div>
+
+    <h1>
+        SOOO… YOU PRESSED YES?! SO WE’RE GOING TO DATE THIS COMING FEBRUARY 14 THEN, AND BATI NA TAYO?!
+    </h1>
+
+    <div class="center-gif">
+        <div class="tenor-gif-embed"
+            data-postid="10515574674042168050"
+            data-share-method="host"
+            data-aspect-ratio="1"
+            data-width="100%">
+        </div>
+    </div>
+
+    <video class="video-container" autoplay loop playsinline controls>
+        <source src="snaptik_7602202676289490196_hd.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script async src="https://tenor.com/embed.js"></script>
+
+</body>
+</html>
